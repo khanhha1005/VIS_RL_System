@@ -592,6 +592,11 @@ def normal_main(list_player, times, print_mode):
         winner, file_per = one_game(shuffle_player, file_temp, file_per, all_penalty)
         count[shuffle[winner]] += 1
     return count, file_per
+def random_player(p_state, temp_file, per_file):
+    arr_action = get_list_action(p_state)
+    act_idx = np.random.randint(0, len(arr_action))
+    return arr_action[act_idx], temp_file, per_file
+
 
 
 
